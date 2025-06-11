@@ -18,6 +18,7 @@ export default function Home() {
             Get started by editing <code>src/app/page.js</code>.
           </li>
           <li>Test!!</li>
+          <li>Uhh like this? so do I make more pages orr edit this one</li>
         </ol>
 
         <div className={styles.ctas}>
