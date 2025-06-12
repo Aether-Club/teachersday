@@ -97,7 +97,9 @@ const styles = {
     fontSize: "1.4rem",
     height: "60px",
     width: "200px",
-    borderRadius: "5px"
+    borderRadius: "5px",
+    backgroundColor: "#ffffff",
+    color: "#000000"
   },
   go: {
     fontSize: "1.4rem",

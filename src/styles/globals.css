@@ -30,8 +30,12 @@ body {
   margin: 0;
 }
 
+p {
+  color: #000000 inherit;
+}
+
 a {
-  color: inherit;
+  color: #000000 inherit;
   text-decoration: none;
 }
 
