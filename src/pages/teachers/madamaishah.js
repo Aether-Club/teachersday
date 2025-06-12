@@ -1,4 +1,5 @@
 import Head from "next/head";
+import Link from "next/link";
 import { Playfair_Display, Inter } from "next/font/google";
 
 const playfair = Playfair_Display({
@@ -29,7 +30,7 @@ export default function MadamAishah() {
                 <main style={styles.main}>
                     <h1 style={styles.h1}>To Madam Aishah</h1>
                     <p style={styles.p}>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque erat leo, egestas id tincidunt non, placerat ac ligula. Phasellus tincidunt lacus quis nibh tincidunt, vel placerat nunc facilisis. Donec ac neque condimentum, fermentum nulla dictum, varius urna. Quisque at ex quis diam dignissim pharetra non eu lorem. Cras posuere sed velit vitae fermentum. Vestibulum vehicula vulputate neque, cursus venenatis risus pulvinar sit amet. Aenean finibus sodales tortor ac auctor.</p>
-                    <a style={styles.a} href="/">&lt; back</a>
+                    <Link style={styles.a} href="/">&lt; back</Link>
                 </main>
             </div>
         </>

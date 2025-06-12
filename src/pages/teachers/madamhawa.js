@@ -2,6 +2,7 @@ import Head from "next/head";
 import gsap from "gsap";
 import { useEffect } from "react";
 import { Playfair_Display, Inter } from "next/font/google";
+import Link from "next/link";
 
 const playfair = Playfair_Display({
     subsets: ["latin"]
@@ -36,7 +37,7 @@ export default function MadamHawa() {
                 <main style={styles.main}>
                     <h1 style={styles.h1}>To Madam Hawa</h1>
                     <p style={styles.p}>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque erat leo, egestas id tincidunt non, placerat ac ligula. Phasellus tincidunt lacus quis nibh tincidunt, vel placerat nunc facilisis. Donec ac neque condimentum, fermentum nulla dictum, varius urna. Quisque at ex quis diam dignissim pharetra non eu lorem. Cras posuere sed velit vitae fermentum. Vestibulum vehicula vulputate neque, cursus venenatis risus pulvinar sit amet. Aenean finibus sodales tortor ac auctor.</p>
-                    <a style={styles.a} href="/">&lt; back</a>
+                    <Link href="/" style={styles.a}>&lt; back</Link>
                 </main>
             </div>
         </>
