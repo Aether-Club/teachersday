@@ -25,7 +25,7 @@ export default function Home() {
         position: "fixed"
       }}>
         <main style={styles.main}>
-          <h1 style={styles.h1}>Happy Teachers' Day 2025</h1>
+          <h1 style={styles.h1}>Happy Teachers&apos; Day 2025</h1>
           <p style={styles.p}>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque erat leo, egestas id tincidunt non, placerat ac ligula. Phasellus tincidunt lacus quis nibh tincidunt, vel placerat nunc facilisis. Donec ac neque condimentum, fermentum nulla dictum, varius urna. Quisque at ex quis diam dignissim pharetra non eu lorem. Cras posuere sed velit vitae fermentum. Vestibulum vehicula vulputate neque, cursus venenatis risus pulvinar sit amet. Aenean finibus sodales tortor ac auctor.</p>
         </main>
       </div>
