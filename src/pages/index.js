@@ -2,6 +2,7 @@ import Head from "next/head";
 import gsap from "gsap";
 import { useState, useEffect } from "react";
 import { Playfair_Display, Inter } from "next/font/google";
+import Sprite from "@/pages/components/sprite";
 
 const playfair = Playfair_Display({
   subsets: ["latin"]
@@ -47,8 +48,17 @@ export default function Home() {
       }}>
         <main style={styles.main}>
           <h1 style={styles.h1}>Happy Teachers&apos; Day 2025</h1>
+          <div style={styles.characters}>
+            {
+              [...Array(30)].map((_, i) => {
+                let n;
+                i < 10 ? n = `0${i}` : n = `${i}`;
+                return <Sprite key={i} sprite={`tile_${n}.png`} style={styles.sprite} interval={Math.random() * 50 + 300} />
+              })
+            }
+          </div>
           <p style={styles.p}>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque erat leo, egestas id tincidunt non, placerat ac ligula. Phasellus tincidunt lacus quis nibh tincidunt, vel placerat nunc facilisis. Donec ac neque condimentum, fermentum nulla dictum, varius urna. Quisque at ex quis diam dignissim pharetra non eu lorem. Cras posuere sed velit vitae fermentum. Vestibulum vehicula vulputate neque, cursus venenatis risus pulvinar sit amet. Aenean finibus sodales tortor ac auctor.</p>
-          <div style={{ display: "flex", gap: "10px" }}>
+          <div style={{ display: "flex", gap: "10px", width: "100%", padding: "0 30px" }}>
             <select onLoad={handleSelectChange} onChange={handleSelectChange} value={selectedTeacher} style={styles.slct}>
               <option value="teacher">Select a Teacher</option>
               <option value="madamhawa">Madam Hawa</option>
@@ -65,22 +75,23 @@ export default function Home() {
 const styles = {
   main: {
     fontFamily: inter.style.fontFamily,
-    padding: "20px",
-    maxWidth: "800px",
-    paddingBottom: "100px"
+    marginBottom: "100px"
   },
   h1: {
     color: "#eb8b65",
     fontFamily: playfair.style.fontFamily,
     fontWeight: "600",
     fontSize: "4rem",
-    marginBottom: "20px"
+    marginBottom: "20px",
+    padding: "20px"
   },
   p: {
+    maxWidth: "800px",
     fontWeight: "500",
     fontSize: "1.6rem",
     marginLeft: "1%",
-    marginBottom: "20px"
+    marginBottom: "20px",
+    padding: "20px"
   },
   slct: {
     fontSize: "1.4rem",
@@ -96,5 +107,17 @@ const styles = {
     border: "none",
     backgroundColor: "#eb8b65",
     color: "white"
+  },
+  characters: {
+    display: "flex", 
+    flexWrap: "wrap",
+    gap: "10px", 
+    padding: "20px 0", 
+    backgroundColor: "#f899a2",
+    margin: "20px 0",
+    justifyContent: "center"
+  },
+  sprite: {
+    margin: "0 10px"
   }
 }

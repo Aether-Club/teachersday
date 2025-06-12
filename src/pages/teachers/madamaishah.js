@@ -1,9 +1,12 @@
 import Head from "next/head";
 import Link from "next/link";
-import { Playfair_Display, Inter } from "next/font/google";
+import gsap from "gsap";
+import { useEffect } from "react";
+import { Inter, Jersey_15 } from "next/font/google";
 
-const playfair = Playfair_Display({
-    subsets: ["latin"]
+const jersey_15 = Jersey_15({
+    subsets: ["latin"],
+    weight: "400"
 })
 
 const inter = Inter({
@@ -11,6 +14,11 @@ const inter = Inter({
 })
 
 export default function MadamAishah() {
+    useEffect(() => {
+            gsap.fromTo("h1", { opacity: 0, x: 50 }, { opacity: 1, x: 0, duration: 1 });
+            gsap.fromTo("p", { opacity: 0, x: 50 }, { opacity: 1, x: 0, duration: 1, delay: 0.5 });
+        }, []);
+    
     return (
         <>
             <Head>
@@ -47,9 +55,8 @@ const styles = {
     },
     h1: {
         color: "#c0a3f6",
-        fontFamily: playfair.style.fontFamily,
-        fontWeight: "600",
-        fontSize: "4rem",
+        fontFamily: jersey_15.style.fontFamily,
+        fontSize: "4.2rem",
         marginBottom: "20px"
     },
     p: {
@@ -59,7 +66,7 @@ const styles = {
         marginBottom: "20px"
     },
     a: {
-        fontFamily: playfair.style.fontFamily,
-        fontSize: "1.6rem"
+        fontFamily: jersey_15.style.fontFamily,
+        fontSize: "2rem"
     }
 }
